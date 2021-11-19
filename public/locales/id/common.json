@@ -1,0 +1,27 @@
+{
+  "hi": "Hi, Perkenalkan Saya",
+  "im-a": "Saya Seorang",
+  "download": "Unduh",
+
+  "nav-home": "Home",
+  "nav-about": "Tentang",
+  "nav-skills": "Kemampuan",
+  "nav-projects": "Projek",
+
+  "interface": "interface",
+
+  "about": "Tentang Saya.",
+  "intro": "Saya adalah mahasiswa Teknik Informasi tahun ke-4 di UHAMKA dan juga seorang junior frontend developer yang sangat ingin mencoba dan belajar hal baru. Saya juga memiliki kemampuan untuk menganalisis masalah perangkat lunak yang ada dan telah membuat proyek yang berhubungan langsung dengan klien, yaitu membuat situs web berdasarkan react js dan juga membuat api berbasis node.js",
+
+  "skills": "Kemampuan dan Alat.",
+
+  "projects": "Projek.",
+  "sipesat": "Membuat Website untuk sistem pengajuan surat.",
+  "docpro": "Membuat beberapa fitur pada website docpro. <br/>Membuat API untuk website docpro.",
+  "healthylenial": "Membuat website untuk tugas kuliah",
+  "foodie": "Membuat website untuk tugas kuliah",
+
+  "contact-me": "Jangan Ragu Untuk Menghubungi Saya",
+  "author": "Dibuat dengan ❤️ oleh",
+  "my-name": "Achmad Sufyan Aziz"
+}

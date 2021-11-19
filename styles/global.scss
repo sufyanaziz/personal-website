@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+
+:root {
+  --color-base: #222831;
+  --color-primary: #00adb5;
+  --color-secondary: #393e46;
+  --color-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-base);
+  color: var(--color-white);
+}
+
+.button-action {
+  border: 1px solid var(--color-primary);
+  padding: 10px 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  &:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  span {
+    margin-left: 10px;
+  }
+}
+
+.nav-container {
+  background-color: var(--color-secondary);
+  height: 15vh;
+  .nav-items {
+    margin-top: 10px;
+    .nav-item {
+      cursor: pointer;
+      border-bottom: 3px solid var(--color-secondary);
+      padding-bottom: 10px;
+      &:hover,
+      &.active {
+        border-bottom: 3px solid var(--color-primary);
+      }
+    }
+  }
+  .nav-item-screen {
+    transform: translateY(-400px);
+    width: 100%;
+    right: 0;
+    background: var(--color-secondary);
+    z-index: 1;
+    transition: transform 0.4 ease-in-out;
+    &.active {
+      transform: translateY(170px);
+      transition: transform 0.4 ease-in-out;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .nav-item {
+      cursor: pointer;
+      border-bottom: 1px solid var(--color-secondary);
+      padding-bottom: 6px;
+      &:hover,
+      &.active {
+        border-bottom: 1px solid var(--color-primary);
+      }
+    }
+  }
+
+  .btn-lang {
+    border: 1px solid var(--color-primary);
+    padding-bottom: 0;
+    padding: 5px;
+    border-radius: 10px;
+    span {
+      border-radius: 8px;
+      padding: 5px;
+      text-align: center;
+      width: 50px;
+      cursor: pointer;
+      &.active {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.interface-container {
+  height: 85vh;
+
+  .text-job {
+    span {
+      color: var(--color-primary);
+      margin-left: 10px;
+      border-bottom: 1px solid var(--color-primary);
+    }
+  }
+
+  .icons {
+    .icon {
+      cursor: pointer;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.about-container {
+  margin-bottom: 2rem;
+  // background: var(--color-secondary);
+  .image-container {
+    .image {
+      border-radius: 50%;
+      border: 10px solid var(--color-primary);
+      overflow: hidden;
+    }
+  }
+}
+.carousel {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  .icon {
+    cursor: pointer;
+    color: var(--color-white);
+    &.disabled {
+      color: var(--color-secondary);
+      cursor: not-allowed;
+    }
+  }
+  .icon-left,
+  .icon-right {
+    background: var(--color-base);
+    width: 45px;
+    height: 45px;
+    border: 3px solid var(--color-primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+  }
+  .icon-left {
+    left: 2.5%;
+  }
+  .icon-right {
+    right: 2.5%;
+  }
+}
+
+.skills {
+  .card-skill {
+    padding: 2rem 8px;
+    border: 3px solid var(--color-primary);
+    border-radius: 6px;
+    transform: translate(0, 0);
+    transition: 0.5s all ease-in-out;
+    &:hover {
+      transform: translate(0, -10px);
+    }
+  }
+}
+
+.project-card {
+  border: 3px solid var(--color-primary);
+  border-radius: 4px;
+  // text-align: center;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .done,
+  .develop {
+    background-color: rgb(67, 212, 67);
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    color: var(--color-base);
+    font-weight: bold;
+  }
+  .develop {
+    background-color: rgb(224, 224, 83);
+  }
+
+  .project-main {
+    padding: 0 2rem 1.5rem 2rem;
+  }
+}
+
+.footer-container {
+  .name {
+    color: var(--color-primary);
+  }
+  .icon {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
