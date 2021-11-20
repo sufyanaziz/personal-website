@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "downloadLocales": "locize download --project-id=d3b405cf-2532-46ae-adb8-99e88d876733 --ver=latest --clean=true --path=./public/static/locales",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -13,7 +14,6 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-responsive": "^9.0.0-beta.4",
-    "react-responsive-carousel": "^3.2.22",
     "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {

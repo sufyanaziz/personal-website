@@ -36,7 +36,7 @@ const Home = (props) => {
     <div className="flex flex-col min-h-screen">
       <Head>
         <title>Achmad Sufyan Aziz</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
 
       <Navbar

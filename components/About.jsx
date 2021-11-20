@@ -22,7 +22,10 @@ const About = ({ t, id }) => {
             <p className="text-lg md:text-xl leading-relaxed">{t('intro')}</p>
           </div>
           <div className="float-left">
-            <button className="button-action">
+            <button
+              className="button-action"
+              onClick={() => window.open('/Resume -  Achmad Sufyan Aziz.pdf')}
+            >
               <AiOutlineDownload /> <span>{t('download')} Resume</span>
             </button>
           </div>
