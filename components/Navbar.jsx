@@ -38,7 +38,7 @@ const Navbar = ({
         setActive={() => setActiveSection(t('nav-home'))}
         onClick={() => {
           const anchor = document.querySelector(`#home`);
-          const yOffset = -120;
+          const yOffset = -130;
           const y =
             anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -52,7 +52,7 @@ const Navbar = ({
         setActive={() => setActiveSection(t('nav-about'))}
         onClick={() => {
           const anchor = document.querySelector(`#about`);
-          const yOffset = -120;
+          const yOffset = -140;
           const y =
             anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -66,7 +66,7 @@ const Navbar = ({
         setActive={() => setActiveSection(t('nav-skills'))}
         onClick={() => {
           const anchor = document.querySelector(`#skills`);
-          const yOffset = -120;
+          const yOffset = -140;
           const y =
             anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -80,7 +80,7 @@ const Navbar = ({
         setActive={() => setActiveSection(t('nav-projects'))}
         onClick={() => {
           const anchor = document.querySelector(`#projects`);
-          const yOffset = -120;
+          const yOffset = -140;
           const y =
             anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -119,7 +119,7 @@ const Navbar = ({
       </div>
 
       <div
-        className={`nav-item-screen block md:hidden h-64 absolute px-8 ${
+        className={`nav-item-screen block md:hidden h-64 absolute px-6 ${
           openNavItem ? 'active' : 'non-active'
         }`}
       >

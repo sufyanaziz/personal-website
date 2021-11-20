@@ -40,7 +40,7 @@ const Footer = ({ t }) => {
             <a className="mr-2" href="mailto:achmadsufyan98@gmail.com">
               <AiFillMail className="icon" fontSize={22} />
             </a>
-            <a href="https://wa.me/085211181046" target="_blank">
+            <a href="https://wa.me/+6285211181046" target="_blank">
               <AiOutlineWhatsApp className="icon" fontSize={22} />
             </a>
           </div>

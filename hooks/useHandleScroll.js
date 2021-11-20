@@ -12,7 +12,7 @@ const useHandleScroll = (setActiveSection, t) => {
     const scrollY = window.scrollY;
     const boundRectHome = getOffset(
       anchorHome.getBoundingClientRect().top,
-      350
+      200
     );
     const boundRectAbout = getOffset(
       anchorAbout.getBoundingClientRect().top,
