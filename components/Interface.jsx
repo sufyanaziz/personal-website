@@ -16,7 +16,7 @@ const Interface = ({ t, id }) => {
         <p className="text-3xl md:text-5xl font-bold">Achmad Sufyan Aziz</p>
       </div>
       <div className="text-job">
-        <div className="text-xl md:text-2xl flex">
+        <div className="text-md sm:text-xl md:text-2xl flex">
           <p>{t('im-a')}</p>
           <Typewriter
             options={{

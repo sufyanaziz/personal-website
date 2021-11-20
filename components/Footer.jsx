@@ -11,10 +11,10 @@ import {
 const Footer = ({ t }) => {
   const year = new Date().getFullYear();
   return (
-    <div className="footer-container px-10 lg:px-28 md:px-10 mb-10 text-center ">
+    <div className="footer-container px-6 lg:px-28 md:px-10 mb-10 text-center ">
       <div className="block lg:flex">
-        <div className="footer-left mb-6 lg:mr-auto lg:mb-0">
-          <p>{t('contact-me')}</p>
+        <div className="footer-left mb-8 lg:mr-auto lg:mb-0">
+          <p className="text-sm md:text-base">{t('contact-me')}</p>
           <div className="icons mt-2 flex justify-center lg:justify-start">
             <a
               className="mr-2"
@@ -46,7 +46,7 @@ const Footer = ({ t }) => {
           </div>
         </div>
         <div className="footer-right">
-          <p>
+          <p className="text-xs md:text-base">
             {t('author')} <span className="name">{t('my-name')}</span> | &copy;{' '}
             {year}
           </p>

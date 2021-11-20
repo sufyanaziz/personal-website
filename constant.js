@@ -4,9 +4,10 @@ import {
   SiSass,
   SiJavascript,
   SiTypescript,
-  SiMysql,
   SiVisualstudiocode,
 } from 'react-icons/si';
+
+import { GrMysql } from 'react-icons/gr';
 
 import SIPESAT from './images/si_pesat_login.png';
 import HEALTHYLENIAL from './images/healthylenial.png';
@@ -21,7 +22,7 @@ const SKILL_DATA = [
   { name: 'Typescript', icon: SiTypescript },
   { name: 'React.js', icon: FaReact },
   { name: 'Node.js', icon: FaNodeJs },
-  { name: 'MySQL', icon: SiMysql },
+  { name: 'MySQL', icon: GrMysql },
   { name: 'GIT', icon: FaGitAlt },
   { name: 'Visual Studio Code', icon: SiVisualstudiocode },
 ];

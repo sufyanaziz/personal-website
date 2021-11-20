@@ -4,15 +4,16 @@ import Image from 'next/image';
 
 import { PROJECT_DATA } from '../constant';
 import Carousel from './Carousel';
+import Title from './Title';
 
 import { useMediaQuery } from 'react-responsive';
 
 const Projects = ({ t, id }) => {
-  const isBigScreen = useMediaQuery({ query: '(min-width: 768px)' });
+  const isBigScreen = useMediaQuery({ query: '(min-width: 640px)' });
   const isBiggerScreen = useMediaQuery({ query: '(min-width: 1024px)' });
 
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [maxItem, setMaxItem] = React.useState(1);
+  const [maxItem, setMaxItem] = React.useState(3);
 
   React.useEffect(() => {
     if (isBiggerScreen) {
@@ -26,9 +27,7 @@ const Projects = ({ t, id }) => {
 
   return (
     <div className="mb-12" id={id}>
-      <div className="mb-10 text-center">
-        <p className="text-3xl md:text-4xl font-bold">{t('projects')}</p>
-      </div>
+      <Title name={t('projects')} />
       <Carousel
         setCurrentIndex={setCurrentIndex}
         currentIndex={currentIndex}
@@ -45,7 +44,7 @@ const Projects = ({ t, id }) => {
                     <p className="text-2xl mb-2">{project.title}</p>
                     <small className={project.status}>{project.status}</small>
                   </div>
-                  <div className="main mb-4 h-24">
+                  <div className="main mb-4 h-28">
                     <div
                       dangerouslySetInnerHTML={{ __html: t(project.name) }}
                     />

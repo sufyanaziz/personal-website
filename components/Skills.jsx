@@ -1,27 +1,25 @@
 import React from 'react';
 
 import Container from './Container';
+import Title from './Title';
 
 import { SKILL_DATA } from '../constant';
 
 const Skills = ({ t, id }) => {
   return (
     <Container id={id}>
-      <div className="mb-10 text-center">
-        <p className="text-3xl md:text-4xl font-bold">{t('skills')}</p>
-      </div>
-      <div className="skills grid grid-cols-2 lg:grid-cols-5 gap-6">
+      <Title name={t('skills')} />
+      <div className="skills grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-6">
         {SKILL_DATA.map((skill) => {
           const Icon = skill.icon;
           return (
-            <div
-              key={skill.name}
-              className="card-skill flex flex-col items-center justify-center"
-            >
-              <Icon className="card-icon mb-5" size={40} />
-              <span className="text-lg font-bold text-center">
-                {skill.name}
-              </span>
+            <div key={skill.name} className="card-skill text-center">
+              <div className="text-center flex justify-center">
+                <Icon className="card-icon mb-5 text-3xl md:text-4xl" />
+              </div>
+              <div className="text-sm md:text-base font-bold">
+                <span>{skill.name}</span>
+              </div>
             </div>
           );
         })}

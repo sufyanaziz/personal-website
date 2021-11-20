@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai';
-import Container from './Container';
 
 const Carousel = ({
   children,
@@ -13,8 +12,8 @@ const Carousel = ({
   const disabledRight = currentIndex === 0 ? true : false;
   const disabledLeft = itemLen === currentIndex + maxItem ? true : false;
   return (
-    <div className="carousel px-10 lg:px-28 md:px-10 mb-16">
-      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3`}>
+    <div className="carousel px-6 lg:px-28 md:px-10 mb-16">
+      <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3`}>
         {children}
       </div>
       <div

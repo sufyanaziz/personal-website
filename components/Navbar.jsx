@@ -92,7 +92,7 @@ const Navbar = ({
   );
 
   return (
-    <div className="nav-container sticky top-0 flex items-center px-8 lg:px-28 md:px-10 z-10">
+    <div className="nav-container sticky top-0 flex items-center px-6 lg:px-28 md:px-10 z-10">
       <div className="nav-header mr-auto">
         <p className="font-bold text-lg lg:text-2xl md:text-xl">
           Achmad Sufyan Aziz
