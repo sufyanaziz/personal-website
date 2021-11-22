@@ -161,12 +161,21 @@ const WORK_EXPERIENCE = [
   },
 ];
 
+const data = {
+  credential: CREDENTIALS,
+  workExperience: WORK_EXPERIENCE,
+  skills: SKILL_DATA,
+  projects: PROJECT_DATA,
+  socialMedia: SOCIAL_MEDIA,
+};
+
 const constant = {
   SKILL_DATA,
   PROJECT_DATA,
   CREDENTIALS,
   SOCIAL_MEDIA,
   WORK_EXPERIENCE,
+  ALLDATA: data,
 };
 
 export default constant;

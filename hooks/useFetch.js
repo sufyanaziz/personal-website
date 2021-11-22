@@ -6,7 +6,10 @@ const useFetch = () => {
 
   const fetchData = async () => {
     try {
-      const payload = await getData('https://asufyanaziz.vercel.app/api');
+      const json = await fetch('https://asufyanaziz.vercel.app/api');
+      const responseJson = await json.json();
+      const payload = await responseJson;
+
       if (payload) {
         setData(payload.data);
         setIsLoading(false);

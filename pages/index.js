@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import useFetch from '../hooks/useFetch';
+// import useFetch from '../hooks/useFetch';
+import constant from '../constant';
 
 // components ------------------------------------
 import Navbar from '../components/Navbar';
@@ -24,7 +25,7 @@ const Home = (props) => {
   const [locale, setLocale] = useState('');
   const router = useRouter();
 
-  const { data, isLoading } = useFetch();
+  const allData = constant.ALLDATA;
 
   useEffect(() => {
     if (router.locale === 'en') {
@@ -36,16 +37,6 @@ const Home = (props) => {
       setLocale('id');
     }
   }, []);
-
-  if (isLoading)
-    return (
-      <div className="flex flex-col min-h-screen">
-        <Head>
-          <title>Achmad Sufyan Aziz</title>
-          <link rel="icon" href="/logo.ico" />
-        </Head>
-      </div>
-    );
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -64,9 +55,14 @@ const Home = (props) => {
       />
       <Interface t={t} id="home" />
       <About t={t} id="about" />
-      <WorkExperience t={t} id="experience" data={data.workExperience} />
-      <Skills t={t} id="skills" data={data.skills} />
-      <Projects t={t} id="projects" data={data.projects} deviceType="desktop" />
+      <WorkExperience t={t} id="experience" data={allData.workExperience} />
+      <Skills t={t} id="skills" data={allData.skills} />
+      <Projects
+        t={t}
+        id="projects"
+        data={allData.projects}
+        deviceType="desktop"
+      />
       <Footer t={t} />
     </div>
   );
