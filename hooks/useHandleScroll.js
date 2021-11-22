@@ -6,6 +6,7 @@ const useHandleScroll = (setActiveSection, t) => {
   const handleScroll = () => {
     const anchorHome = document.querySelector(`#home`);
     const anchorAbout = document.querySelector(`#about`);
+    const anchorExperience = document.querySelector(`#experience`);
     const anchorSkills = document.querySelector(`#skills`);
     const anchorProjects = document.querySelector(`#projects`);
 
@@ -16,6 +17,10 @@ const useHandleScroll = (setActiveSection, t) => {
     );
     const boundRectAbout = getOffset(
       anchorAbout.getBoundingClientRect().top,
+      200
+    );
+    const boundRectExperience = getOffset(
+      anchorExperience.getBoundingClientRect().top,
       200
     );
     const boundRectSkills = getOffset(
@@ -31,6 +36,8 @@ const useHandleScroll = (setActiveSection, t) => {
       setActiveSection(t('nav-home'));
     } else if (scrollY < boundRectAbout) {
       setActiveSection(t('nav-about'));
+    } else if (scrollY < boundRectExperience) {
+      setActiveSection(t('nav-experience'));
     } else if (scrollY < boundRectSkills) {
       setActiveSection(t('nav-skills'));
     } else if (scrollY < boundRectProjects) {

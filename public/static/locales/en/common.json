@@ -5,6 +5,7 @@
 
   "nav-home": "Home",
   "nav-about": "About",
+  "nav-experience": "Experience",
   "nav-skills": "Skills",
   "nav-projects": "Projects",
 
@@ -13,15 +14,21 @@
   "about": "About Me.",
   "intro": "I am a 4th years Information Technology student at UHAMKA and also a junior frontend developer who would really like to try and learn a new thing. I also having the ability to analyze software problems which exists and have made a directly related projects with client, which is to make a website based on react js and also create an api node js based",
 
+  "experience": "Work Experience",
+  "we-waresix": "Front-end design, development and testing using React to build feature-rich and user-friendly web /mobile applications. <br/> Maintain and improve our high-quality in-house JavaScript libraries and toolsets, for example a complete React UI framework following our design guidelines. <br/> Develop, test and maintain responsive web/mobile apps with elegant UX that delight our users and raise their productivity.",
+  "we-bpti": "Create Website si_pesat (mail submission system). <br/> Develop, test and maintain website.",
+  "we-docpro": "Create API for website docpro (dentist appointment). <br/> Create a few feature on the website.",
+
   "skills": "Skills and Tools.",
 
   "projects": "Projects.",
+  "simple_calculator": "Create simple calculator using react, typescript, dan redux",
   "sipesat": "Create Website for sistem pengajuan surat.",
   "docpro": "Create a few features on the website docpro. <br/>Create API for the website docpro.",
   "healthylenial": "Create Website for college assignments",
   "foodie": "Create Website for college assignments",
 
-  "contact-me": "Feel Free To Contact Me",
+  "contact-me": "Get In Touch",
   "author": "Made with ❤️ by",
   "my-name": "Achmad Sufyan Aziz"
 }

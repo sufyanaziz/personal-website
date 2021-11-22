@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import Container from './Container';
-import MyPhoto from '../images/my-photo.png';
+// import MyPhoto from '/images/my-photo.png';
 import { AiOutlineDownload } from 'react-icons/ai';
 
 import Title from './Title';
@@ -13,8 +13,15 @@ const About = ({ t, id }) => {
       <Title name={t('about')} />
       <div className="about-container flex-row lg:flex items-center">
         <div className="image-container mb-12 lg:mr-16 lg:mb-0 items-center justify-center flex">
-          <div className="image w-72 h-72 flex items-center justify-center">
-            <Image objectFit="contain" src={MyPhoto} className="img" />
+          <div className="relative image w-72 h-72 flex items-center justify-center">
+            <Image
+              placeholder="blur"
+              blurDataURL="/images/my-photo.png"
+              objectFit="cover"
+              src="/images/my-photo.png"
+              className="img"
+              layout="fill"
+            />
           </div>
         </div>
         <div className="main">

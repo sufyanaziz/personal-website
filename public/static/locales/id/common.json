@@ -3,8 +3,9 @@
   "im-a": "Saya seorang",
   "download": "Unduh",
 
-  "nav-home": "Home",
+  "nav-home": "Beranda",
   "nav-about": "Tentang",
+  "nav-experience": "Pengalaman",
   "nav-skills": "Kemampuan",
   "nav-projects": "Projek",
 
@@ -13,15 +14,21 @@
   "about": "Tentang Saya.",
   "intro": "Saya adalah mahasiswa Teknik Informasi tahun ke-4 di UHAMKA dan juga seorang junior frontend developer yang sangat ingin mencoba dan belajar hal baru. Saya juga memiliki kemampuan untuk menganalisis masalah perangkat lunak yang ada dan telah membuat proyek yang berhubungan langsung dengan klien, yaitu membuat situs web berdasarkan react js dan juga membuat api berbasis node.js",
 
+  "experience": "Pengalaman",
+  "we-waresix": "Desain, pengembangan, dan pengujian front-end menggunakan React untuk membangun aplikasi web/mobile yang kaya fitur dan ramah pengguna. <br/> Memelihara dan meningkatkan perpustakaan dan perangkat JavaScript internal kami yang berkualitas tinggi, misalnya kerangka kerja UI React lengkap yang mengikuti panduan desain kami. <br/> Kembangkan, uji, dan pertahankan aplikasi web/seluler responsif dengan UX elegan yang menyenangkan pengguna kami dan meningkatkan produktivitas mereka.",
+  "we-bpti": "Membuat Website si_pesat (sistem pengiriman surat). <br/> Mengembangkan, menguji, dan memelihara website.",
+  "we-docpro": "Membuatuat API untuk website docpro (dokter gigi). <br/> Membuat beberapa fitur pada website.",
+
   "skills": "Kemampuan dan Alat.",
 
   "projects": "Projek.",
+  "simple_calculator": "Membuat website calculator sederhana, menggunakan react, typescript dan redux",
   "sipesat": "Membuat Website untuk sistem pengajuan surat.",
   "docpro": "Membuat beberapa fitur pada website docpro. <br/>Membuat API untuk website docpro.",
   "healthylenial": "Membuat website untuk tugas kuliah",
   "foodie": "Membuat website untuk tugas kuliah",
 
-  "contact-me": "Jangan Ragu Untuk Menghubungi Saya",
+  "contact-me": "Tetap Berhubungan dengan Saya",
   "author": "Dibuat dengan ❤️ oleh",
   "my-name": "Achmad Sufyan Aziz"
 }

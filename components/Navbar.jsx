@@ -61,6 +61,20 @@ const Navbar = ({
         }}
       />
       <NavItem
+        name={t('nav-experience')}
+        active={activeSection}
+        setActive={() => setActiveSection(t('nav-experience'))}
+        onClick={() => {
+          const anchor = document.querySelector(`#experience`);
+          const yOffset = -140;
+          const y =
+            anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          if (anchor === null) return;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }}
+      />
+      <NavItem
         name={t('nav-skills')}
         active={activeSection}
         setActive={() => setActiveSection(t('nav-skills'))}
@@ -92,13 +106,11 @@ const Navbar = ({
   );
 
   return (
-    <div className="nav-container sticky top-0 flex items-center px-6 lg:px-28 md:px-10 z-10">
+    <div className="nav-container sticky top-0 flex items-center px-6 lg:px-16 md:px-10 z-10">
       <div className="nav-header mr-auto">
-        <p className="font-bold text-lg lg:text-2xl md:text-xl">
-          Achmad Sufyan Aziz
-        </p>
+        <p className="font-bold text-lg md:text-2xl">Achmad Sufyan Aziz</p>
       </div>
-      <div className="nav-items-container hidden md:flex">
+      <div className="nav-items-container hidden lg:flex">
         <div className="nav-items flex">{Item()}</div>
         <div className="btn-lang flex ml-4">
           <Link href="/" locale={locale === 'en' ? 'id' : 'en'}>
@@ -110,7 +122,7 @@ const Navbar = ({
         </div>
       </div>
 
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <GiHamburgerMenu
           fontSize={28}
           onClick={() => setOpenNavItem(!openNavItem)}
@@ -119,7 +131,7 @@ const Navbar = ({
       </div>
 
       <div
-        className={`nav-item-screen block md:hidden h-64 absolute px-6 ${
+        className={`nav-item-screen block lg:hidden h-72 absolute px-6 ${
           openNavItem ? 'active' : 'non-active'
         }`}
       >
@@ -141,7 +153,7 @@ const NavItem = ({ name, active, setActive, onClick }) => {
   const activeSection = name === active ? 'active' : 'non-active';
   return (
     <p
-      className={`nav-item mr-5 last:mr-0 ${activeSection}`}
+      className={`nav-item mr-5 last:mr-0 ${activeSection} text-sm lg:text-base`}
       onClick={() => {
         setActive();
         onClick();

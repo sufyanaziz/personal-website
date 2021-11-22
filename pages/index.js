@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import useFetch from '../hooks/useFetch';
+
 // components ------------------------------------
 import Navbar from '../components/Navbar';
 import Interface from '../components/Interface';
@@ -12,6 +14,7 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
+import WorkExperience from '../components/WorkExperience';
 
 const Home = (props) => {
   const { t } = useTranslation('common');
@@ -20,6 +23,8 @@ const Home = (props) => {
   const [activeId, setActiveId] = useState('');
   const [locale, setLocale] = useState('');
   const router = useRouter();
+
+  const { data, isLoading } = useFetch();
 
   useEffect(() => {
     if (router.locale === 'en') {
@@ -31,6 +36,16 @@ const Home = (props) => {
       setLocale('id');
     }
   }, []);
+
+  if (isLoading)
+    return (
+      <div className="flex flex-col min-h-screen">
+        <Head>
+          <title>Achmad Sufyan Aziz</title>
+          <link rel="icon" href="/logo.ico" />
+        </Head>
+      </div>
+    );
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -49,8 +64,9 @@ const Home = (props) => {
       />
       <Interface t={t} id="home" />
       <About t={t} id="about" />
-      <Skills t={t} id="skills" />
-      <Projects t={t} id="projects" />
+      <WorkExperience t={t} id="experience" data={data.workExperience} />
+      <Skills t={t} id="skills" data={data.skills} />
+      <Projects t={t} id="projects" data={data.projects} deviceType="desktop" />
       <Footer t={t} />
     </div>
   );

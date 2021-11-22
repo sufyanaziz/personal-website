@@ -3,15 +3,15 @@ import React from 'react';
 import Container from './Container';
 import Title from './Title';
 
-import { SKILL_DATA } from '../constant';
+import useIcon from '../hooks/useIcon';
 
-const Skills = ({ t, id }) => {
+const Skills = ({ t, id, data }) => {
   return (
     <Container id={id}>
       <Title name={t('skills')} />
       <div className="skills grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-6">
-        {SKILL_DATA.map((skill) => {
-          const Icon = skill.icon;
+        {data.map((skill) => {
+          const Icon = useIcon(skill.code);
           return (
             <div key={skill.name} className="card-skill text-center">
               <div className="text-center flex justify-center">

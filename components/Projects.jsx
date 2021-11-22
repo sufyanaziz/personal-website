@@ -1,88 +1,86 @@
 import React from 'react';
 
 import Image from 'next/image';
-
-import { PROJECT_DATA } from '../constant';
-import Carousel from './Carousel';
 import Title from './Title';
 
-import { useMediaQuery } from 'react-responsive';
+import useIcon from '../hooks/useIcon';
 
-const Projects = ({ t, id }) => {
-  const isBigScreen = useMediaQuery({ query: '(min-width: 640px)' });
-  const isBiggerScreen = useMediaQuery({ query: '(min-width: 1024px)' });
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [maxItem, setMaxItem] = React.useState(3);
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1200 },
+    items: 3,
+    paritialVisibilityGutter: 60,
+  },
+  tablet: {
+    breakpoint: { max: 1200, min: 464 },
+    items: 2,
+    paritialVisibilityGutter: 50,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    paritialVisibilityGutter: 30,
+  },
+};
 
-  React.useEffect(() => {
-    if (isBiggerScreen) {
-      setMaxItem(3);
-    } else if (isBigScreen) {
-      setMaxItem(2);
-    } else {
-      setMaxItem(1);
-    }
-  }, [isBigScreen, isBiggerScreen]);
-
+const Projects = ({ t, id, data }) => {
   return (
-    <div className="mb-12" id={id}>
+    <div className="mb-12 px-6 lg:px-28 md:px-10 py-5" id={id}>
       <Title name={t('projects')} />
-      <Carousel
-        setCurrentIndex={setCurrentIndex}
-        currentIndex={currentIndex}
-        itemLen={PROJECT_DATA.length}
-        maxItem={maxItem}
-      >
-        {PROJECT_DATA.slice(currentIndex, currentIndex + maxItem).map(
-          (project, i) => {
-            return (
-              <div className="project-card" key={i}>
-                <Image src={project.image} />
-                <div className="project-main">
-                  <div className="header mt-4 mb-5 h-16 flex flex-col">
-                    <p className="text-2xl mb-2">{project.title}</p>
-                    <small className={project.status}>{project.status}</small>
-                  </div>
-                  <div className="main mb-4 h-28">
-                    <div
-                      dangerouslySetInnerHTML={{ __html: t(project.name) }}
-                    />
-                  </div>
-                  <div className="links h-20">
-                    {project.progLang.map((lang, i) => {
-                      return (
-                        <React.Fragment key={i}>
-                          <span className="mr-2 underline">{lang}</span>
-                        </React.Fragment>
-                      );
-                    })}
-                    <div className="flex items-center mt-5">
-                      {project.link.length !== 0 &&
-                        project.link.map((link, i) => {
-                          const Icon = link.icon;
-                          return (
-                            <a
-                              className="mr-2 last:mr-0"
-                              href={link.to}
-                              target="_blank"
-                              key={i}
-                            >
-                              <Icon size={20} />
-                            </a>
-                          );
-                        })}
-                    </div>
+      <Carousel ssr itemClass="image-item" responsive={responsive}>
+        {data.map((project, i) => {
+          return (
+            <div className="project-card" key={i}>
+              <div className="project-image">
+                <Image
+                  placeholder="blur"
+                  blurDataURL={project.image}
+                  src={project.image}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="project-main">
+                <div className="header mt-4 mb-5 h-16 flex flex-col">
+                  <p className="text-2xl mb-2">{project.title}</p>
+                  <small className={project.status}>{project.status}</small>
+                </div>
+                <div className="main mb-4 h-28">
+                  <div dangerouslySetInnerHTML={{ __html: t(project.name) }} />
+                </div>
+                <div className="links h-20">
+                  {project.progLang.map((lang, i) => {
+                    return (
+                      <React.Fragment key={i}>
+                        <span className="mr-2 underline">{lang}</span>
+                      </React.Fragment>
+                    );
+                  })}
+                  <div className="flex items-center mt-5">
+                    {project.link.length !== 0 &&
+                      project.link.map((link, i) => {
+                        const Icon = useIcon(link.name);
+                        return (
+                          <a
+                            className="mr-2 last:mr-0"
+                            href={link.to}
+                            target="_blank"
+                            key={i}
+                          >
+                            <Icon size={20} />
+                          </a>
+                        );
+                      })}
                   </div>
                 </div>
               </div>
-            );
-          }
-        )}
+            </div>
+          );
+        })}
       </Carousel>
-      {/* <div className="flex">
-        
-      </div> */}
     </div>
   );
 };

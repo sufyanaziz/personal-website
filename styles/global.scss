@@ -58,7 +58,7 @@ body {
     z-index: 1;
     transition: transform 0.4 ease-in-out;
     &.active {
-      transform: translateY(170px);
+      transform: translateY(187px);
       transition: transform 0.4 ease-in-out;
     }
     p {
@@ -116,7 +116,6 @@ body {
 
 .about-container {
   margin-bottom: 2rem;
-  // background: var(--color-secondary);
   .image-container {
     .image {
       border-radius: 50%;
@@ -174,11 +173,12 @@ body {
 .project-card {
   border: 3px solid var(--color-primary);
   border-radius: 4px;
-  // text-align: center;
-  transform: translateY(0);
-  transition: transform 0.5s ease-in-out;
-  &:hover {
-    transform: translateY(-10px);
+  margin-right: 12px;
+
+  .project-image {
+    width: 100%;
+    position: relative;
+    height: 200px;
   }
 
   .done,
@@ -195,7 +195,7 @@ body {
   }
 
   .project-main {
-    padding: 0 2.2rem 1.5rem 2.2rem;
+    padding: 0 2rem;
   }
 }
 
@@ -206,6 +206,42 @@ body {
   .icon {
     &:hover {
       color: var(--color-primary);
+    }
+  }
+}
+
+.experience-container {
+  background: var(--color-secondary);
+  margin-bottom: 4rem;
+  color: var(--color-white);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-base);
+  }
+
+  .main {
+    margin-top: -25px;
+    .main-container {
+      margin-bottom: 2rem;
+      .title {
+        flex: 0.5;
+        margin-right: 2rem;
+      }
+      .info {
+        flex: 1;
+      }
     }
   }
 }
