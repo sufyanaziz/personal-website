@@ -4,6 +4,8 @@ export const getData = async (url) => {
       method: 'GET',
       headers: {
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, PUT, GET, OPTIONS',
+        mode: 'no-cors',
       },
     });
     return await response.json();
