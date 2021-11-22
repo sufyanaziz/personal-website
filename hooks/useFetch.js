@@ -6,7 +6,17 @@ const useFetch = () => {
 
   const fetchData = async () => {
     try {
-      const payload = await getData('http://localhost:3000/api');
+      const res = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST, PUT, GET, OPTIONS',
+          mode: 'no-cors',
+        },
+      });
+      const responseJson = await res.json();
+      const payload = await responseJson;
+
       if (payload) {
         setData(payload.data);
         setIsLoading(false);
