@@ -16,14 +16,14 @@
 
   "experience": "Work Experience",
   "we-waresix": "Front-end design, development and testing using React to build feature-rich and user-friendly web /mobile applications. <br/> Maintain and improve our high-quality in-house JavaScript libraries and toolsets, for example a complete React UI framework following our design guidelines. <br/> Develop, test and maintain responsive web/mobile apps with elegant UX that delight our users and raise their productivity.",
-  "we-bpti": "Create Website si_pesat (mail submission system). <br/> Develop, test and maintain website.",
+  "we-bpti": "Create Website sipesat (mail submission system). <br/> Develop, test and maintain website.",
   "we-docpro": "Create API for website docpro (dentist appointment). <br/> Create a few feature on the website.",
 
   "skills": "Skills and Tools.",
 
   "projects": "Projects.",
-  "simple_calculator": "Create simple calculator using react, typescript, dan redux",
-  "sipesat": "Create Website for sistem pengajuan surat.",
+  "simple_calculator": "Create simple calculator using react, typescript, and redux",
+  "sipesat": "Create Website for mail submission system.",
   "docpro": "Create a few features on the website docpro. <br/>Create API for the website docpro.",
   "healthylenial": "Create Website for college assignments",
   "foodie": "Create Website for college assignments",
