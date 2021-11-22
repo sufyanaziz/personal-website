@@ -5,7 +5,9 @@ const useFetch = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
-    const response = await fetch('http://localhost:3000/api');
+    const response = await fetch('http://localhost:3000/api', {
+      method: 'GET',
+    });
     const payload = await await response.json();
     if (payload) {
       setData(payload.data);
