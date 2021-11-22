@@ -6,17 +6,7 @@ const useFetch = () => {
 
   const fetchData = async () => {
     try {
-      const res = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST, PUT, GET, OPTIONS',
-          mode: 'no-cors',
-        },
-      });
-      const responseJson = await res.json();
-      const payload = await responseJson;
-
+      const payload = await getData('https://asufyanaziz.vercel.app/api');
       if (payload) {
         setData(payload.data);
         setIsLoading(false);
