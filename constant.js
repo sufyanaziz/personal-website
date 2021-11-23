@@ -151,10 +151,10 @@ const WORK_EXPERIENCE = [
     keyword: 'we-bpti',
   },
   {
-    name: 'Freelance',
+    name: 'Freelancer',
     dateOfEntry: 'Jul 2020',
     outDate: 'Sep 2020',
-    job: 'Web Developer Intern',
+    job: 'Freelance Web Developer',
     responsibility:
       '- Create API for website docpro (dentist appointment). <br/> - Create a few feature on the website.',
     keyword: 'we-docpro',
