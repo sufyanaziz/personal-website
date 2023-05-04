@@ -20,7 +20,7 @@ const Interface = ({ t, id }) => {
           <p>{t('im-a')}</p>
           <Typewriter
             options={{
-              strings: ['Frontend Developer.', 'Backend Developer.', 'Gamer.'],
+              strings: ['Front End Engineer.', 'Web Developer.', 'Gamer.'],
               autoStart: true,
               loop: true,
             }}

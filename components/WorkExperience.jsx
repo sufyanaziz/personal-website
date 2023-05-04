@@ -8,20 +8,22 @@ const WorkExperience = ({ t, data, id }) => {
       <div className="main">
         {data.map((experience) => {
           const outDate =
-            experience.outDate === 'NaN' ? 'now' : experience.outDate;
+            experience.outDate === 'NaN' ? 'Present' : experience.outDate;
           return (
             <div
               key={experience.keyword}
               className="main-container block md:flex"
             >
               <div className="title mb-2 md:mb-0">
-                <p className="font-bold text-lg">{experience.name}</p>
                 <p>
                   {experience.dateOfEntry} - {outDate}
                 </p>
               </div>
               <div className="info mb-3 md:mb-0">
                 <p className="font-bold text-lg">{experience.job}</p>
+                <p className="text-base mb-2 text-color-primary">
+                  {experience.name}
+                </p>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: t(experience.keyword),

@@ -134,18 +134,27 @@ const SOCIAL_MEDIA = [
 const WORK_EXPERIENCE = [
   {
     name: 'Waresix',
-    dateOfEntry: 'Nov 2021',
+    dateOfEntry: 'Mar 2022',
     outDate: 'NaN',
-    job: 'Frontend Developer Intern',
+    job: 'Junior Front End Engineer',
     responsibility:
       'Front-end design, development and testing using React to build feature-rich and user-friendly web /mobile applications. <br/> Maintain and improve our high-quality in-house JavaScript libraries and toolsets, for example a complete React UI framework following our design guidelines. <br/> Develop, test and maintain responsive web/mobile apps with elegant UX that delight our users and raise their productivity.',
     keyword: 'we-waresix',
   },
   {
+    name: 'Waresix',
+    dateOfEntry: 'Nov 2021',
+    outDate: 'Feb 2021',
+    job: 'Intern Junior Front End Engineer',
+    responsibility:
+      'Front-end design, development and testing using React to build feature-rich and user-friendly web /mobile applications. <br/> Maintain and improve our high-quality in-house JavaScript libraries and toolsets, for example a complete React UI framework following our design guidelines. <br/> Develop, test and maintain responsive web/mobile apps with elegant UX that delight our users and raise their productivity.',
+    keyword: 'we-waresix-intern',
+  },
+  {
     name: 'BPTI (UHAMKA)',
     dateOfEntry: 'Jan 2021',
     outDate: 'Sep 2021',
-    job: 'Web Developer Intern',
+    job: 'Intern Web Developer',
     responsibility:
       '- Create Website si_pesat (mail submission system). <br/> - Develop, test and maintain website.',
     keyword: 'we-bpti',
@@ -154,7 +163,7 @@ const WORK_EXPERIENCE = [
     name: 'Freelancer',
     dateOfEntry: 'Jul 2020',
     outDate: 'Sep 2020',
-    job: 'Freelance Web Developer',
+    job: 'Web Developer',
     responsibility:
       '- Create API for website docpro (dentist appointment). <br/> - Create a few feature on the website.',
     keyword: 'we-docpro',

@@ -12,10 +12,11 @@
   "interface": "interface",
 
   "about": "About Me.",
-  "intro": "I am a 4th years Information Technology student at UHAMKA and also a junior frontend developer who would really like to try and learn a new thing. I also having the ability to analyze software problems which exists and have made a directly related projects with client, which is to make a website based on react js and also create an api node js based",
+  "intro": "A Front End Engineer with more than 1 year experience in writing programs using React with Javascript or TypeScript. I have experience developing and improving web applications with rules of following performance limits, system design, and user acceptance, and also I have good skills to analyze problems in a program. I am committed to learning and testing myself with something new such as making the program more efficient and professional.",
 
   "experience": "Work Experience",
-  "we-waresix": "Front-end design, development and testing using React to build feature-rich and user-friendly web /mobile applications. <br/> Maintain and improve our high-quality in-house JavaScript libraries and toolsets, for example a complete React UI framework following our design guidelines. <br/> Develop, test and maintain responsive web/mobile apps with elegant UX that delight our users and raise their productivity.",
+  "we-waresix-intern": "<ul><li>Front End design, development and testing using React to build feature‑rich and user‑friendly web applications.</li><li>Develop, test and maintain responsive web apps with elegant UX that delight users and raise their productivity.</li><li>Develop features related to payment management for internal users.</li><li>Fixing bug.</li></ul>",
+  "we-waresix": "<b>Fleet Management Team (November 2022 ‑ Present)</b><br/><ul><li>Develop, improve, and maintain features related to feet management for internal users.</li><li>Develop, improve, and maintain features related to trip, feet management, and payment management for vendor users.</li><li>Improve the style of component system design for a newer look.</li><li>Create unit test.</li><li>Fixing bug.</li></ul><br/><b>Payment Management Team (March 2022 ‑ September 2022)</b><br/><ul><li>Develop, improve, and maintain features related to payment management for internal users.</li><li>Improve component system design so that it can be adjusted to the needs of the payment management team.</li><li>Fixing bug.</li></ul>",
   "we-bpti": "Create Website sipesat (mail submission system). <br/> Develop, test and maintain website.",
   "we-docpro": "Create API for website docpro (dentist appointment). <br/> Create a few feature on the website.",
 

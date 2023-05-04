@@ -26,12 +26,16 @@ const About = ({ t, id }) => {
         </div>
         <div className="main">
           <div className="mb-10">
-            <p className="text-lg md:text-xl text-justify   ">{t('intro')}</p>
+            <p className="text-lg md:text-xl text-justify">{t('intro')}</p>
           </div>
           <div className="float-left">
             <button
               className="button-action"
-              onClick={() => window.open('/Resume -  Achmad Sufyan Aziz.pdf')}
+              onClick={() =>
+                window.open(
+                  '/Achmad Sufyan Aziz - Front End Engineer - Resume.pdf'
+                )
+              }
             >
               <AiOutlineDownload /> <span>{t('download')} Resume</span>
             </button>

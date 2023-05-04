@@ -155,8 +155,10 @@ const NavItem = ({ name, active, setActive, onClick }) => {
     <p
       className={`nav-item mr-5 last:mr-0 ${activeSection} text-sm lg:text-base`}
       onClick={() => {
-        setActive();
         onClick();
+        setTimeout(() => {
+          setActive();
+        }, 200);
       }}
     >
       {name}
